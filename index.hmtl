@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGRImotus — Space-Water Nexus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green-glow: #39ff8a;
+      --space-dark: #030812;
+    }
+    body { background-color: var(--space-dark); color: #cdd9ea; font-family: 'Syne', sans-serif; overflow-x: hidden; }
+    .font-orbit { font-family: 'Orbitron', monospace; }
+    .glow-text { color: var(--green-glow); text-shadow: 0 0 12px rgba(57,255,138,.6); }
+    .hero-img { box-shadow: 0 0 30px rgba(57,255,138,.30); transition: all .4s ease; }
+    .hero-img:hover { box-shadow: 0 0 50px rgba(57,255,138,.50); transform: scale(1.01); }
+    .lang-btn { border: 1px solid rgba(57,255,138,.35); color: rgba(57,255,138,.7); font-family: 'Orbitron'; font-size: .65rem; padding: .35rem .75rem; border-radius: 2px; cursor: pointer; transition: all .25s; }
+    .lang-btn.active { background: rgba(57,255,138,.12); color: var(--green-glow); border-color: var(--green-glow); }
+    .logo-card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 6px; backdrop-filter: blur(4px); transition: all 0.3s; }
+    .logo-card:hover { border-color: var(--green-glow); background: rgba(57,255,138,.03); }
+    .badge { display: inline-flex; align-items: center; gap: .4rem; background: rgba(57,255,138,.08); border: 1px solid rgba(57,255,138,.25); color: rgba(57,255,138,.85); font-family: 'Orbitron'; font-size: .6rem; padding: .3rem .7rem; }
+    .award-tag { font-size: 9px; color: #39ff8a; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; }
+  </style>
+</head>
+
+<body>
+  <header class="flex items-center justify-between px-5 py-4 sm:px-8 relative z-50">
+    <div class="font-orbit text-sm tracking-widest glow-text">AGRI<span class="text-white/60">motus</span></div>
+    <div class="flex gap-1">
+      <button id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button id="btn-it" class="lang-btn" onclick="setLang('it')">IT</button>
+    </div>
+  </header>
+
+  <main class="flex flex-col items-center px-5 pt-10 pb-12">
+    <div class="badge mb-6">
+      <span class="lang-en">CASSINI HACKATHON · CHALLENGE 1</span>
+      <span class="lang-it hidden">CASSINI HACKATHON · SFIDA 1</span>
+    </div>
+    <h1 class="font-orbit text-center text-3xl sm:text-5xl mb-4"><span class="glow-text">AGRI</span>motus</h1>
+    <p class="text-center mb-10 text-white/40 text-xs sm:text-sm max-w-md">
+      <span class="lang-en">Space Intelligence for Equitable Water Access</span>
+      <span class="lang-it hidden">Intelligenza Spaziale per l'Accesso Equo all'Acqua</span>
+    </p>
+
+    <div class="w-full max-w-lg mb-10">
+      <img src="https://raw.githubusercontent.com/Leon-TM/agrimotus-space-water/main/Agrimotus-TAIKAI.jpg" alt="AGRImotus" class="hero-img rounded-lg w-full shadow-2xl">
+    </div>
+
+    <p class="text-center max-w-lg text-sm text-white/60 leading-relaxed italic">
+      <span class="lang-en">"Prototype under development for CASSINI Hackathon. Merging Sentinel-3 data with Edge AI to optimize global water distribution."</span>
+      <span class="lang-it hidden">"Prototipo in fase di sviluppo per CASSINI Hackathon. Uniamo i dati Sentinel-3 con l'Edge AI per ottimizzare la distribuzione idrica globale."</span>
+    </p>
+  </main>
+
+  <section class="px-5 py-16 bg-white/5">
+    <h2 class="font-orbit text-center text-xs tracking-[0.3em] text-white/30 uppercase mb-12">Expertise & Leadership</h2>
+    
+    <div class="max-w-6xl mx-auto mb-10">
+        <img src="https://raw.githubusercontent.com/Leon-TM/agrimotus-space-water/main/Team%20TAPTA%20by%20Agrimotus_Tronci-Mori-Tronci.jpg" class="rounded-lg w-full max-w-3xl mx-auto border border-white/10 mb-12 shadow-xl">
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      
+      <div class="logo-card p-6 border-emerald-400/30">
+        <div class="glow-text font-orbit text-lg mb-1">Leonardo Tronci</div>
+        <p class="text-[10px] font-orbit text-white/50 mb-4 uppercase tracking-tighter">Lead AI Architect & PM</p>
+        <div class="space-y-2">
+          <p class="award-tag">🏆 Global L3 Award Winner (EMOpet)</p>
+          <p class="award-tag">🏅 Finalist Robotics Oostende 2026</p>
+          <p class="award-tag">🌊 Blue-Cloud 2026 Finalist</p>
+          <p class="award-tag">🤖 Sardegna Ricerche "Ehi Robot!"</p>
+        </div>
+        <p class="text-[11px] text-white/40 mt-4 leading-tight">
+            <span class="lang-en">Only Italian student in multiple international finals. Expert in Deep Learning and Satellite Data Fusion.</span>
+            <span class="lang-it hidden">Unico studente italiano in multiple finali internazionali. Esperto in Deep Learning e Fusione Dati Satellitari.</span>
+        </p>
+      </div>
+
+      <div class="logo-card p-6">
+        <div class="glow-text font-orbit text-lg mb-1">Prof. Tiziana Mori (Ph.D)</div>
+        <p class="text-[10px] font-orbit text-white/50 mb-4 uppercase tracking-tighter">Scientific & Research Lead</p>
+        <div class="space-y-2">
+          <p class="award-tag">🏅 CASSINI Hackathon 2025 Finalist</p>
+          <p class="award-tag">🏅 EIT Food EWA 2023 National Finalist</p>
+          <p class="award-tag">🌊 Blue-Cloud / EDITO Finalist</p>
+        </div>
+        <p class="text-[11px] text-white/40 mt-4 leading-tight">
+            <span class="lang-en">Expert in sustainable agrifood systems and bio-molecular validation for Blue Zones. Scientific Lead at TAPTA.</span>
+            <span class="lang-it hidden">Esperta in sistemi agrifood sostenibili e validazione bio-molecolare per le Blue Zone. Lead scientifico TAPTA.</span>
+        </p>
+      </div>
+
+      <div class="logo-card p-6">
+        <div class="glow-text font-orbit text-lg mb-1">Dr. Massimiliano Tronci</div>
+        <p class="text-[10px] font-orbit text-white/50 mb-4 uppercase tracking-tighter">Compliance & Blue Strategy</p>
+        <div class="space-y-2">
+          <p class="award-tag">🏅 CASSINI Hackathon 2025 Finalist</p>
+          <p class="award-tag">🏅 Blue-Cloud / EDITO Finalist</p>
+          <p class="award-tag">⚖️ Environmental Law Researcher</p>
+        </div>
+        <p class="text-[11px] text-white/40 mt-4 leading-tight">
+            <span class="lang-en">Specialist in GDPR, EU Data Protection, and Regulatory Compliance for Territorial Innovation.</span>
+            <span class="lang-it hidden">Specialista in GDPR, Protezione Dati UE e conformità normativa per l'innovazione territoriale.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-20 px-5">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto opacity-60">
+      <div class="logo-card p-4 flex justify-center items-center">
+        <img src="https://raw.githubusercontent.com/Leon-TM/agrimotus-space-water/main/logo%20Agrimotus.jpg" class="max-h-12 grayscale brightness-200">
+      </div>
+      <div class="logo-card p-4 flex justify-center items-center">
+        <img src="https://raw.githubusercontent.com/Leon-TM/agrimotus-space-water/main/Movere%202.0%20Logo.jpg" class="max-h-12 grayscale brightness-200">
+      </div>
+      <div class="logo-card p-4 flex justify-center items-center">
+        <img src="https://raw.githubusercontent.com/Leon-TM/agrimotus-space-water/main/Arka%20Eventi%20Culturali%20-logo.jpg" class="max-h-12 grayscale brightness-200">
+      </div>
+      <div class="logo-card p-4 flex justify-center items-center">
+        <img src="https://raw.githubusercontent.com/Leon-TM/agrimotus-space-water/main/Logo%20TAPTA.jpg" class="max-h-12 grayscale brightness-200">
+      </div>
+    </div>
+  </section>
+
+    Info: Leo.Tronci@tiscali.it
+
+  <footer class="py-10 text-center border-t border-white/5 text-[10px] font-orbit text-white/20 tracking-widest uppercase">
+    © 2026 AGRImotus — Space-Water Nexus Project | Movere Ecosystem
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang !== 'en'));
+      document.querySelectorAll('.lang-it').forEach(el => el.classList.toggle('hidden', lang !== 'it'));
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-it').classList.toggle('active', lang === 'it');
+    }
+  </script>
+</body>
+</html>
